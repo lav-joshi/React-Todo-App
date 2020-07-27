@@ -3,7 +3,7 @@ const app=express();
 
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const PORT = 4000;
+const PORT = process.env.PORT||4000;
 require("./db/mongoose");
 app.use(cors());
 app.use(bodyParser.json());
